@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="text-center">
+    <form class="form-group" (ngSubmit)="onSubmit(recipeForm)" #recipeForm="ngForm">
+      <input ngModel name="searchValue" class="form-control" placeholder="Search for the Recipe" >
+      <div class="text-center">
+        <button class="btn btn-success" type="submit">Search</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div *ngIf="isLoaded">
+  <div *ngIf="recipeLength; else nocontents">
+    <div class="container" >
+      <div class="card-columns" >
+        <div class="card" *ngFor="let recipe of recipes | paginate: config">
+            <app-display-recipe [recipe] = "recipe"></app-display-recipe>
+        </div> 
+      </div>
+    </div>
+    <div class="center">
+      <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
+    </div>
+  </div>
+  <ng-template #nocontents>
+    <div class="container">
+      <h3>We could not Recipes that you have asked for.. Please search for some other iteam.</h3>
+      <img src="../../assets/result-not-found-1.png">
+    </div>
+  </ng-template>
+</div>
+
