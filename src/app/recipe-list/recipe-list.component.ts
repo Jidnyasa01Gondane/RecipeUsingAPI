@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { RecipeService} from '../recipe.service';
-import { Recipe } from '../recipe.model';
+
 
 @Component({
   selector: 'app-recipe-list',
@@ -50,6 +50,7 @@ export class RecipeListComponent implements OnInit {
       this.recipeLength = this.recipes.length;
     });
   }
+
 
 
 }

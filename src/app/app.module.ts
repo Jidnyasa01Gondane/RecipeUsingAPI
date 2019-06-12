@@ -9,13 +9,15 @@ import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { DisplayRecipeComponent } from './recipe-list/display-recipe/display-recipe.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { HeaderComponent } from './header/header.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RecipeListComponent,
     DisplayRecipeComponent,
-    HeaderComponent
+    HeaderComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
