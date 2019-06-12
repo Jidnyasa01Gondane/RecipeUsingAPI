@@ -11,7 +11,6 @@ export class DisplayRecipeComponent implements OnInit {
   @Input() recipe : Recipe;
   
   ngOnInit() {
-    console.log(this.recipe);
   }
 
 

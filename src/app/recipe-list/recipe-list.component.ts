@@ -37,7 +37,6 @@ export class RecipeListComponent implements OnInit {
       this.recipes = recipes[this.keys[1]];
       this.isLoaded = true;
       this.recipeLength = this.recipes.length;
-      console.log(this.recipes.length)
     });
   }
 
@@ -49,7 +48,6 @@ export class RecipeListComponent implements OnInit {
       this.recipes = recipes[this.keys[1]];
       this.isLoaded = true;
       this.recipeLength = this.recipes.length;
-      console.log(this.recipes.length)
     });
   }
 
